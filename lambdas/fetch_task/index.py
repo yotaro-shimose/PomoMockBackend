@@ -91,7 +91,6 @@ def handler(event, context):
             ),
         ),
     ]
-    root_task_ids = "task1"
+    root_task_ids = ["task1", "task2"]
     response = Response(ResponseBody(task=tasks, rootTaskId=root_task_ids))
-    print(response.into_lambda_response())
     return response.into_lambda_response()
